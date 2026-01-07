@@ -17,12 +17,10 @@ body {
 }
 
 .header {
-  width: 100%;
   padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 
 .logo__img {
@@ -74,17 +72,13 @@ body {
   background-color: var(--color-primary);
 }
 
-.nav__link.is-active::after {
-  opacity: 1;
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 @media (min-width: 1024px) {
   .nav__item + .nav__item {
     margin-left: 24px;
-  }
-
-  .nav__link {
-    height: 60px;
   }
 
   .logo__img {
@@ -102,8 +96,4 @@ body {
     width: 40px;
     height: 40px;
   }
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 20px;
 }
