@@ -3,13 +3,8 @@
 }
 
 /* #region Header with Logo */
-html {
-  font-style: normal;
-}
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -62,7 +57,7 @@ body {
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  bottom: 0; /* Xpx з дизайну */
+  bottom: 0;
   right: 0;
   left: 0;
   height: 4px;
