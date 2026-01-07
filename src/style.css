@@ -1,3 +1,107 @@
+:root {
+  --color-primary: #00acdc;
+}
+
+/* #region Header with Logo */
+html {
+  font-style: normal;
+}
+
 body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
   margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding-inline: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__img {
+  display: flex;
+}
+
+.nav {
+  text-transform: uppercase;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  height: 60px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+}
+
+.nav__link.is-active {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; /* Xpx з дизайну */
+  width: 37px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  opacity: 0;
+}
+
+.nav__link:hover::after,
+.nav__link.is-active::after {
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .nav__item + .nav__item {
+    margin-left: 24px;
+  }
+
+  .nav__link {
+    height: 60px;
+  }
+
+  .logo__img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__item + .nav__item {
+    margin-left: 32px;
+  }
+  .nav__link {
+    height: 60px;
+  }
+
+  .logo__img {
+    width: 40px;
+    height: 40px;
+  }
 }
