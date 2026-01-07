@@ -8,16 +8,16 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  margin: 0;
 }
 
 .header {
-  width: 100%;
-  padding-inline: 50px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,22 +32,22 @@ body {
 }
 
 .nav__item + .nav__item {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .nav__list {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .nav__link {
+  padding: 0;
   height: 60px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: inline-flex;
+  line-height: 60px;
+  display: inline-block;
   color: #000;
   text-decoration: none;
 }
@@ -61,18 +61,17 @@ body {
   color: var(--color-primary);
 }
 
-.nav__link::after {
+.nav__link.nav__link.is-active::after {
   content: '';
   position: absolute;
-  bottom: -6px; /* Xpx з дизайну */
-  width: 37px;
+  bottom: 0; /* Xpx з дизайну */
+  right: 0;
+  left: 0;
   height: 4px;
   border-radius: 8px;
   background-color: var(--color-primary);
-  opacity: 0;
 }
 
-.nav__link:hover::after,
 .nav__link.is-active::after {
   opacity: 1;
 }
@@ -96,12 +95,13 @@ body {
   .nav__item + .nav__item {
     margin-left: 32px;
   }
-  .nav__link {
-    height: 60px;
-  }
 
   .logo__img {
     width: 40px;
     height: 40px;
   }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
 }
