@@ -25,14 +25,12 @@ body {
 
 .logo__img {
   display: flex;
+  width: 40px;
+  height: 40px;
 }
 
 .nav {
   text-transform: uppercase;
-}
-
-.nav__item + .nav__item {
-  margin-right: 20px;
 }
 
 .nav__list {
@@ -74,26 +72,4 @@ body {
 
 .nav__item:not(:last-child) {
   margin-right: 20px;
-}
-
-@media (min-width: 1024px) {
-  .nav__item + .nav__item {
-    margin-left: 24px;
-  }
-
-  .logo__img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nav__item + .nav__item {
-    margin-left: 32px;
-  }
-
-  .logo__img {
-    width: 40px;
-    height: 40px;
-  }
 }
